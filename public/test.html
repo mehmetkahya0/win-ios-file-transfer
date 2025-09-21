@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Test</title>
+    <style>
+        body { 
+            background: red; 
+            color: white; 
+            padding: 20px; 
+            font-family: Arial, sans-serif;
+        }
+        .test { 
+            background: blue; 
+            padding: 10px; 
+            border-radius: 5px; 
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSS Loading Test</h1>
+    <div class="test">If this text has a blue background, inline CSS is working.</div>
+    <div class="container">If this text has special styling, external CSS is loading.</div>
+    
+    <script>
+        console.log('Test page loaded');
+        // Check if external CSS loaded
+        setTimeout(() => {
+            const container = document.querySelector('.container');
+            const styles = window.getComputedStyle(container);
+            console.log('Container background:', styles.backgroundColor);
+            console.log('Container max-width:', styles.maxWidth);
+        }, 1000);
+    </script>
+</body>
+</html>

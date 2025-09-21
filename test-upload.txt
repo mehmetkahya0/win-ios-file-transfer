@@ -1,0 +1,3 @@
+This is a test text file for upload testing.
+It should be allowed by the system since text/plain is in the allowed MIME types.
+You can use this file to test if the upload functionality works.
